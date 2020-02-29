@@ -1,0 +1,13 @@
+.signup-contents
+  .signup-content
+    %h2 Sorfortgramm
+    %p.friend友達の写真や動画をチェックしよう
+    = form_with model: @user, local: true do |form|
+      -# = render "devise/shared/error_messages", resource: resource
+      .signup-view
+        .field
+          = form.text_field :name, autofocus: true, autocomplete: "email", placeholder: "お名前", class: "name-form", value: current_user.name
+        .field
+          = form.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "email-form", value: current_user.email
+        .actions
+          = form.submit "変更する", class: "signup-btn"

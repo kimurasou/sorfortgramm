@@ -1,0 +1,40 @@
+.profile-contents{
+  margin-top: 40px;
+  margin-left: 430px;
+  .profile-content{
+    display: flex;
+    .round-image{
+      border-radius: 50%;
+    }
+    .user-name{
+      margin-top: 17px;
+      margin-left: 80px;
+      h1{
+        font-weight: bold;
+        font-size: 30px;
+        display: inline;
+      }
+      .profile-edit{
+        display: inline;
+        margin-left: 20px;
+        .edit-profile{
+          text-decoration: none;
+          color: #333;
+          border: solid 1px #ccc;
+          padding: 3px 20px;
+          border-radius: 2px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        i{
+          margin-left: 5px;
+        }
+        .delete-user{
+          text-decoration: none;
+          color: red;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

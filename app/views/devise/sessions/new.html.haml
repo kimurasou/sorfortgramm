@@ -1,0 +1,14 @@
+.signin-contents
+  .signin-content
+    %h2 Sorfortgramm
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .signin-view
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "login-email"
+        .field
+          = f.password_field :password, autocomplete: "current-password", class: "login-password"
+        .actions
+          = f.submit "ログイン", class: "login-btn"
+    .register
+      %p.donthaveアカウントを持っていない場合
+      =link_to "登録はこちら", new_user_registration_path, class: "register-here"

@@ -1,0 +1,20 @@
+.signup-contents
+  .signup-content
+    %h2 Sorfortgramm
+    %p.friend友達の写真や動画をチェックしよう
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      -# = render "devise/shared/error_messages", resource: resource
+      .signup-view
+        .field
+          = f.text_field :name, autofocus: true, autocomplete: "email", placeholder: "お名前", class: "name-form"
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "email-form"
+        .field
+          = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード（6文字以上）", class: "password-form"
+        .field
+          = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "確認用パスワード", class: "confirmation-form"
+        .actions
+          = f.submit "登録する", class: "signup-btn"
+    .display
+      %p.login-hereアカウントをお持ちの方は
+      =link_to "こちら", new_user_session_path, class: "login"

@@ -1,0 +1,10 @@
+%nav.navbar
+  .container
+    = link_to "Sorfortgramm", root_path, class: "root"
+    %ul.nalvbar-nav
+      %li
+        =link_to new_post_path, class: "new-post" do
+          = icon('far', 'plus-square')
+      %li
+        =link_to  user_path(current_user), class: "nav-mypage" do
+          = icon('far', 'user')

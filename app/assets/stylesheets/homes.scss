@@ -1,0 +1,62 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-wrap{
+  margin-top: 40px;
+  .card{
+    width: 500px;
+    margin: 0 auto;
+    .card-header{
+      display: flex;
+      .no-text-decoration{
+        text-decoration: none;
+        .post-profile-icon{
+          border-radius: 50%;
+          height: 55px;
+          width: 55px;
+        }
+      }
+    }
+    .name-user{
+      padding-top: 15px;
+      .user-name{
+        text-decoration: none;
+        color: black;
+        margin-left: 10px;
+      }
+    }
+    .card-body{
+      margin-top: 10px;
+      .like-comment{
+        .love{
+          text-decoration: none;
+          color: black;
+          font-size: 23px;
+          margin-left: 10px;
+          .far-heart{
+            background-color: red;
+          }
+        }
+        .comment{
+          text-decoration: none;
+          color: black;
+          font-size: 23px;
+          margin-left: 12px;
+        }
+      }
+      .post-content{
+        .post-text{
+          height: 50px;
+          border-bottom: 1px solid #ccc;
+          overflow: scroll;
+          margin-top: 8px;
+          .created-at{
+            color: #ccc;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
