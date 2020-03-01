@@ -8,7 +8,9 @@
           .name-user
             = link_to user_path(post.user), class: "user-name" do
               = post.user.name
-        = image_tag post.photos.first.image.url(:medium), class: "card-img-top", width: "500px", heigth: "600px"
+        -# = image_tag post.photos.first.image.url(:medium), class: "card-img-top", width: "500px", heigth: "600px"
+        -# = image_tag image_url, data: { index: i }, width: "100", height: '120'
+        = image_tag post.photos[0].image.url, height: "500px", width: "500px"
         .card-body
           .like-comment
             = link_to  "#", class: "love" do
