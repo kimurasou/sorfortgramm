@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @post = Post.new(post_params)
     if @post.photos.present?
       @post.save
