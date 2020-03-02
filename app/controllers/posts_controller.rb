@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
+    @post = Post.find_by(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+  end
 
   def new
     @post = Post.new

@@ -95,6 +95,20 @@
             height: 150px;
             margin-left: 7px;
             overflow: scroll;
+            .comment-user{
+              display: flex;
+              margin: 10px 0;
+              a{
+                text-decoration: none;
+                color: black;
+              }
+              .koron{
+                margin-left: 8px;
+              }
+              .comment-text{
+                margin-left: 15px;
+              }
+            }
           }
         }
         .comment-content{
