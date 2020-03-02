@@ -17,10 +17,12 @@
         = image_tag post.photos[0].image.url, height: "500px", width: "650px"
         .card-body
           .like-comment
-            = link_to  "#", class: "love" do
-              = icon('far', 'heart')
-            = link_to  "#", class: "comment" do
-              = icon('far', 'comment')
+            %div{:id => "like-icon-post-#{post.id.to_s}"}
+              - if post.liked_by(current_user).present?
+                = link_to "いいねを取り消す", post_like_path(post.id, post.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text"
+              - else
+                = link_to "いいね", post_likes_path(post), method: :POST, remote: true, class: "love hide-text"
+
           %div
             %strong 「いいね！」10件
           %div.post-content
@@ -41,11 +43,8 @@
                 %pあああああ
                 %pあああああ
                 %pあああああ
-            = form_with do |form|
+            = form_with model: @comment, url: post_comments_path(post), method: :post, local: true  do |form|
               .comment-content
-                -# %form.w-100{:action => "#"}
-                -#   %div
-                -#     %textarea.form-control.comment-input.border-0{:placeholder => "コメント...", :rows => "1"}
-                =form.text_area :comment, placeholder: "例）素敵ですね", class: "comment-form"
+                =form.text_area :text, placeholder: "例）素敵ですね", class: "comment-form"
               .comment-button
                 =form.submit "コメントする", class: "comment-btn"
