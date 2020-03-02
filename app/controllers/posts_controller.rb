@@ -18,7 +18,16 @@ class PostsController < ApplicationController
       redirect_to root_path
       flash[:alert] = "投稿に失敗しました"
     end
+  end
 
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    if @post.destroy
+      flash[:notice] = "削除されました"
+    else
+      flash[:alert] = "削除できませんでした"
+    end
+    redirect_to root_path
   end
 
   private

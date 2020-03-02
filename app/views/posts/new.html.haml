@@ -1,5 +1,6 @@
-= form_with model: @post, local: true do |form|
-  = form.fields_for :photos do |image|
-    = image.file_field :image, class: "image-upload"
-  = form.text_field :text, class: "text-form"
-  = form.submit "投稿する", class: "post-btn"
+.post-new
+  = form_with model: @post, local: true do |form|
+    = form.fields_for :photos do |image|
+      = image.file_field :image, class: "image-upload"
+    = form.text_field :text, class: "text-form"
+    = form.submit "投稿する", class: "post-btn"

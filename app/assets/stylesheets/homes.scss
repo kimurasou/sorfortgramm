@@ -5,21 +5,41 @@
 .card-wrap{
   margin-top: 40px;
   .card{
-    width: 500px;
+    // height: 1000px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    width: 650px;
     margin: 0 auto;
+    // height: 600px;
     .card-header{
       display: flex;
+      padding: 10px 0 10px 20px;
+      // margin-left: 20px;
+      background-color: #f5f5f5;
       .no-text-decoration{
         text-decoration: none;
+        width: 40px;
+        height: 40px;
         .post-profile-icon{
           border-radius: 50%;
-          height: 55px;
-          width: 55px;
+          height: 40px;
+          width: 40px;
+          line-height: 10px;
+        }
+      }
+      .delete-post{
+        float: right;
+        margin-left: 480px;
+        margin-top: 5px;
+        .post-delete{
+          text-decoration: none;
+          font-size: 20px;
+          color: black;
         }
       }
     }
     .name-user{
-      padding-top: 15px;
+      padding-top: 8px;
       .user-name{
         text-decoration: none;
         color: black;
@@ -28,6 +48,7 @@
     }
     .card-body{
       margin-top: 10px;
+      // height: 1000px;
       .like-comment{
         .love{
           text-decoration: none;
@@ -47,13 +68,65 @@
       }
       .post-content{
         .post-text{
-          height: 50px;
-          border-bottom: 1px solid #ccc;
+          // height: 150px;
+          // border-bottom: 1px solid #ccc;
+          margin-left: 10px;
           overflow: scroll;
           margin-top: 8px;
           .created-at{
             color: #ccc;
             font-size: 14px;
+            margin-left: 10px;
+            .post-time{
+              text-decoration: none;
+              color: #ccc;
+            }
+          }
+        }
+        .comment-all{
+          margin-left: 10px;
+          margin-top: 10px;
+          // overflow: scroll;
+          height: 150px;
+          .current-comment{
+            font-weight: bold;
+          }
+          .comment-each{
+            height: 150px;
+            margin-left: 7px;
+            overflow: scroll;
+          }
+        }
+        .comment-content{
+          padding-top: 60px;
+          .comment-form{
+            width: 600px;
+            padding-top: 21px;
+            padding-left: 15px;
+            padding-right: 15px;
+            // padding-bottom: 5px;
+            border-radius: 40px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            // border-style: none;
+            // line-height: 5px;
+          }
+        }
+        .comment-button{
+          margin-bottom: 10px;
+          // border-top: 1px solid #ccc;
+          .comment-btn{
+            // text-align: center;
+            border-style: none;
+            display: block;
+            margin: 0 auto;
+            // margin-top: 7px;
+            width: 200px;
+            padding: 10px 0;
+            color: #2fc7ed;
+            // color: white;
+            // border-radius: 40px;
+            // border: 1px solid #2fc7ed
           }
         }
       }
