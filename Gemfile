@@ -65,7 +65,8 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'jquery-rails'
 gem "font-awesome-sass"
 gem 'devise'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave'
 gem "mini_magick"
 gem "pry-rails"
 gem 'rb-readline'
+gem 'fog-aws'
