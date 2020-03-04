@@ -14,8 +14,8 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory  = 'sorfortgramm2'
-    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/sorfortgramm2'
+    config.fog_directory  = 'sorfortgramm3'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/sorfortgramm3'
   else
     config.storage = :file
   end
