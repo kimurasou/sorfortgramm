@@ -23,9 +23,13 @@
             - else
               = link_to "Like", post_likes_path(post), method: :POST, remote: true, class: "love hide-text"
 
-          %div
-            %strong 「いいね！」
+          %div.comment-like
+            %strong いいね！
             = post.likes.length
+            %q件
+            %br
+            %strong コメント
+            = post.comments.length
             %q件
           %div.post-content
             .post-text

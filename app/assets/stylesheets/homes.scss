@@ -50,6 +50,9 @@
     .card-body{
       margin-top: 10px;
       // height: 1000px;
+      .comment-like{
+        margin-left: 10px;
+      }
       .like-comment{
         // .love{
         //   text-decoration: none;
@@ -63,12 +66,12 @@
         .love.hide-text{
           text-decoration: none;
           color: blue;
-          margin-left: 8px;
+          margin-left: 10px;
         }
         .loved.hide-text{
           text-decoration: none;
           color: red;
-          margin-left: 8px;
+          margin-left: 10px;
         }
         .comment{
           text-decoration: none;
