@@ -24,7 +24,9 @@
                 = link_to "Like", post_likes_path(post), method: :POST, remote: true, class: "love hide-text"
 
           %div
-            %strong 「いいね！」10件
+            %strong 「いいね！」
+            = post.likes.length
+            %q件
           %div.post-content
             .post-text
               %span= post.text
@@ -33,19 +35,3 @@
                 = link_to time_ago_in_words(post.created_at).upcase + "前", "#", class: "post-time"
               .post-show
                 =link_to "詳細を見る", post_path(post), class: "show-link"
-            -# .comment-all
-            -#   %h2.current-comment
-            -#     < コメント一覧 >
-            -#   .comment-each
-            -#     - if @comments
-            -#       - @comments.each do |comment|
-            -#         .comment-user
-            -#           =link_to comment.user.name
-            -#           %p.koron :
-            -#           .comment-text
-            -#             %p.comment-honbun=comment.text
-            -# = form_with model: @comment, url: post_comments_path(post), method: :post, local: true  do |form|
-            -#   .comment-content
-            -#     =form.text_area :text, placeholder: "例）素敵ですね", class: "comment-form"
-            -#   .comment-button
-            -#     =form.submit "コメントする", class: "comment-btn"
