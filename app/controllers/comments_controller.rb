@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @comment = Comment.create(comment_params)
     if @comment.save
       flash[:notice] = "コメントしました"
-      redirect_to root_path
+      redirect_to "/posts/#{@comment.post.id}"
     else
       flash[:alert] = "コメントできませんでした"
     end

@@ -31,6 +31,8 @@
               %q.created-at 
                 -# = post.created_at
                 = link_to time_ago_in_words(post.created_at).upcase + "前", "#", class: "post-time"
+              .post-show
+                =link_to "詳細を見る", post_path(@post), class: "show-link"
             -# .comment-all
             -#   %h2.current-comment
             -#     < コメント一覧 >

@@ -26,6 +26,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+  end
+
   def destroy
     @post = Post.find_by(id: params[:id])
     if @post.destroy

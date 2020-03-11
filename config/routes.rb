@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # get '/users/:id', to: 'users#show', as: 'user'
   resources :users, only: [:show, :edit, :update]
-  resources :posts, only: [:index, :new, :create, :destroy] do
+  resources :posts, only: [:index, :new, :show, :create, :destroy] do
     resources :photos, only: [:create]
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :show, :destroy]

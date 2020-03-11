@@ -1,3 +1,64 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.contents-row{
+  .content-row{
+    display: flex;
+    // .image-post{
+    //   height:
+    // }
+    .comment-all{
+      .current-comment{
+        margin-left: 235px;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .comment-each{
+        height: 300px;
+        width: 600px;
+        overflow: scroll;
+        .comment-user{
+          display: flex;
+          margin-top: 7px;
+          margin-left: 70px;
+          a{
+            text-decoration: none;
+            color: #44a3a3;
+          }
+          .koron{
+            display: block;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+      .comment-content{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: -40px;
+        .comment-form{
+          padding: 37px 17px 12px 17px;
+          width: 100%;
+          border-radius: 6px;
+        }
+      }
+      .comment-button{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-left: 200px;
+        .comment-btn{
+          padding: 12px 17px 12px 17px;
+          width: 300px;
+          border-radius: 6px;
+          background-color: #57cad9;
+          color: white;
+          border: solid 1px #57cad9;
+        }
+      }
+    }
+  }
+}
